@@ -1,5 +1,4 @@
 <?php
-$shortcode_name = 'interactive';
 // TODO make a view interactive button to take them to a specific page that is only that...
 
 if ( ! function_exists('cap_interactive_register') ) {
@@ -114,4 +113,4 @@ function ccb_interactive_shortcode_register() {
 		)
 	);
 }
-add_action('init', 'ccb_'.$shortcode_name.'_shortcode_register');
+add_action('init', 'ccb_interactive_shortcode_register');

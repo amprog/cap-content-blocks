@@ -1,5 +1,5 @@
 <?php
-$shortcode_name = 'download';
+
 function ccb_download_shortcode_register() {
 
     add_shortcode( 'ccb_download', function( $attr ) {
@@ -69,4 +69,4 @@ function ccb_download_shortcode_register() {
 	);
 
 }
-add_action('init', 'ccb_'.$shortcode_name.'_shortcode_register');
+add_action('init', 'ccb_download_shortcode_register');

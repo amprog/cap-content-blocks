@@ -25,18 +25,13 @@ function ccb_styles_scripts() {
     if ( !wp_style_is( 'mdi', 'enqueued' ) ) {
         wp_enqueue_style( 'mdi',  plugin_dir_url( __FILE__ ) . 'bower_components/mdi/css/materialdesignicons.min.css' );
     }
-    // if ( wp_script_is( $handle, 'enqueued' ) ) {
-    //     return;
-    // } else {
-    //     wp_register_script( 'fluidVids.js', plugin_dir_url(__FILE__).'js/fluidvids.min.js');
-    //     wp_enqueue_script( 'fluidVids.js' );
-    // }
+
 }
 add_action( 'wp_enqueue_scripts', 'ccb_styles_scripts' );
 
 function ccb_editor_style() {
     add_editor_style( plugin_dir_url( __FILE__ ) . 'css/ccb-editor-style.css' );
-    // check for material design icons and then include
+    add_editor_style( plugin_dir_url( __FILE__ ) . 'bower_components/mdi/css/materialdesignicons.min.css' );
 }
 add_action( 'admin_init', 'ccb_editor_style' );
 
@@ -47,3 +42,4 @@ include $plugin_dir.'/shortcodes/interactive.php';
 include $plugin_dir.'/shortcodes/parallax.php';
 include $plugin_dir.'/shortcodes/pullquote.php';
 include $plugin_dir.'/shortcodes/related-post.php';
+include $plugin_dir.'/shortcodes/video.php';

@@ -1,5 +1,5 @@
 <?php
-$shortcode_name = 'content';
+
 function ccb_content_shortcode_register() {
 
     add_shortcode( 'ccb_content', function( $attr ) {
@@ -63,4 +63,4 @@ function ccb_content_shortcode_register() {
 		)
 	);
 }
-add_action('init', 'ccb_'.$shortcode_name.'_shortcode_register');
+add_action('init', 'ccb_content_shortcode_register');

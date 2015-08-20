@@ -1,5 +1,5 @@
 <?php
-$shortcode_name = 'related_post';
+
 function ccb_related_post_shortcode_register() {
 
     add_shortcode( 'ccb_related_post', function( $attr ) {
@@ -37,7 +37,7 @@ function ccb_related_post_shortcode_register() {
 		'ccb_related_post',
 		array(
 			'label' => 'Related Post',
-			'listItemImage' => 'dashicons-media-document',
+			'listItemImage' => 'dashicons-admin-links',
 			'post_type'     => array( 'reports', 'post' ),
 			'attrs' => array(
 
@@ -53,4 +53,4 @@ function ccb_related_post_shortcode_register() {
 		)
 	);
 }
-add_action('init', 'ccb_'.$shortcode_name.'_shortcode_register');
+add_action('init', 'ccb_related_post_shortcode_register');

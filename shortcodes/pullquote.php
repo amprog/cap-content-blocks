@@ -1,5 +1,5 @@
 <?php
-$shortcode_name = 'pullquote';
+
 function ccb_pullquote_shortcode_register() {
 
     add_shortcode( 'ccb_pullquote', function( $attr, $content = null ) {
@@ -70,4 +70,4 @@ function ccb_pullquote_shortcode_register() {
 	);
 
 }
-add_action('init', 'ccb_'.$shortcode_name.'_shortcode_register');
+add_action('init', 'ccb_pullquote_shortcode_register');
