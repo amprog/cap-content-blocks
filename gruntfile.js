@@ -15,14 +15,6 @@ module.exports = function(grunt) {
             },
         },
 
-        // uglify: {
-        //     my_target: {
-        //         files: {
-        //             'js/minified/report-header.min.js': ['bower_components/swiper/dist/js/swiper.jquery.js']
-        //         }
-        //     }
-        // },
-
         watch: {
             grunt: { files: ['gruntfile.js'] },
 

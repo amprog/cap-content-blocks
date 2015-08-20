@@ -6,16 +6,16 @@
     margin-top: 1rem!important;
     margin-left: auto!important;
     margin-right: auto!important;
-    background-color: #eaeaea;
+    background-color: $light-gray;
     border-radius: 5px;
-    border: 1px solid darken(#eaeaea, 5%);
+    border: 1px solid darken($light-gray, 5%);
     padding: 0.8rem;
     // Icon
     & > div:first-of-type {
         position: relative;
         margin-left: -45px;
         i {
-            background-color: white;
+            background-color: $white;
             border-radius: 50px;
             padding: 0.5rem;
             margin-right: 0.8rem;
