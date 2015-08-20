@@ -1,0 +1,22 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+// Variables
+@import "variables/sizes";
+@import "variables/colors";
+@import "variables/typography";
+// Frameworks
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+figure.ccb {
+    position: relative;
+    &.ccb-interactive {
+        margin-left: 0;
+        margin-right: 0;
+        & > div,
+        & > div[style],
+        & > iframe,
+        & > embed {
+            width: 100%!important;
+        }
+    }
+}
