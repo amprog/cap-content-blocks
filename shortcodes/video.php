@@ -2,6 +2,7 @@
 /**
  * @param checks to see if the current post has a [video] shortcode.
  * @return script that will autoplay an HTML5 video player when in viewport, pauses when exits viewport.
+ * @extends https://codex.wordpress.org/Video_Shortcode
  */
 function ccb_video_script() {
 	global $post;
@@ -19,7 +20,7 @@ function ccb_video_script() {
                         if (jQuery(this).is(":in-viewport( 400 )") && typecheck == "mep") {
                             mejs.players[jQuery(this).attr('id')].media.play();
                         } else if (typecheck == "mep") {
-                            mejs.players[jQuery(this).attr('id')].media.stop();
+                            mejs.players[jQuery(this).attr('id')].media.pause();
                         }
                     });
                 });
