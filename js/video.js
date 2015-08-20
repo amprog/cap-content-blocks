@@ -2,7 +2,7 @@
 jQuery(window).bind("load",function(){
     jQuery(function() {
         jQuery(window).scroll(function() {
-            jQuery('#content:not(.hidden) .wp-video-shortcode').each(function() {
+            jQuery('.wp-video-shortcode').each(function() {
                 var str = jQuery(this).attr('id');
                 var arr = str.split('_');
                 typecheck = arr[0];

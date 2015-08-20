@@ -1,5 +1,6 @@
 <?php
-$shortcode_name = 'parallax';
+//TODO implement this http://pixelcog.github.io/parallax.js/
+
 function ccb_parallax_shortcode_register() {
 
     add_shortcode( 'ccb_parallax', function( $attr ) {
@@ -34,6 +35,10 @@ function ccb_parallax_shortcode_register() {
 		return ob_get_clean();
 
 	} );
+
+    if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+       return;
+    }
 
     shortcode_ui_register_for_shortcode(
 		'ccb_parallax',
@@ -76,4 +81,4 @@ function ccb_parallax_shortcode_register() {
 	);
 
 }
-add_action('init', 'ccb_'.$shortcode_name.'_shortcode_register');
+add_action('init', 'ccb_parallax_shortcode_register');

@@ -1,3 +1,7 @@
+body#tinymce .ccb.ccb-parallax .inner {
+  min-height: 400px !important;
+}
+
 html {
   box-sizing: border-box;
 }

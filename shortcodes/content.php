@@ -30,6 +30,10 @@ function ccb_content_shortcode_register() {
 
 	} );
 
+    if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+       return;
+    }
+
     shortcode_ui_register_for_shortcode(
 		'ccb_content',
 		array(
