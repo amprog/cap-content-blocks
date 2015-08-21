@@ -24,7 +24,7 @@ figure.ccb.ccb-interactive > div, figure.ccb.ccb-interactive > div[style], figur
 .ccb-chapter .chapter-title {
   margin-bottom: 2rem;
 }
-.ccb-chapter:not(:first-of-type) .chapter-title:before {
+.ccb-chapter:not(:first-of-type):before {
   margin-top: 2rem;
   margin-bottom: 2rem;
   content: "";
@@ -139,12 +139,19 @@ figure.ccb.ccb-interactive > div, figure.ccb.ccb-interactive > div[style], figur
 }
 .ccb-pullquote .source {
   font-size: 0.8rem;
-  color: #eaeaea;
+  color: #c4c4c4;
 }
 .ccb-pullquote .source:before {
   content: "-";
   display: inline-block;
   margin-right: 0.2rem;
+}
+
+.wp-video {
+  margin-top: 1rem;
+}
+.wp-video[style] {
+  width: auto !important;
 }
 
 /*# sourceMappingURL=ccb-editor-style.css.map */

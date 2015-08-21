@@ -7,7 +7,7 @@
     }
     .source {
         font-size: 0.8rem;
-        color: $light-gray;
+        color: darken($light-gray, 15%);
         &:before {
             content: "-";
             display: inline-block;
