@@ -27,6 +27,48 @@ figure.ccb.ccb-interactive > div, figure.ccb.ccb-interactive > div[style], figur
   display: block;
   border-top: 2px solid #eaeaea;
 }
+.ccb-chapter.ccb-chapter-has-image:before {
+  display: none;
+}
+.ccb-chapter.ccb-chapter-has-image .ccb-chapter-image {
+  background-size: 100% auto;
+}
+.ccb-chapter.ccb-chapter-has-image .ccb-chapter-image h1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .ccb-chapter.ccb-chapter-has-image .ccb-chapter-image {
+    background-attachment: fixed;
+  }
+}
 
 .ccb-download {
   display: -webkit-box;

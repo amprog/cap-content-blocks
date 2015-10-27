@@ -11,14 +11,20 @@ function ccb_chapter_shortcode_register() {
         $title  = $attr['title'];
         $bg_id  = $attr['background_image'];
         $bg     = '';
+        $class  = 'ccb ccb-chapter';
         if ($bg_id) {
             $bg = wp_get_attachment_image_src( $bg_id, 'large' );
+            $class .= ' ccb-chapter-has-image';
         }
 		?>
 		<?php do_action('ccb_chapter_outside_before');?>
-		<section class="ccb ccb-chapter" data-chapter-title="<?php echo esc_attr($title);?>">
+		<section class="<?php echo $class;?>" data-chapter-title="<?php echo esc_attr($title);?>">
 			<?php do_action('ccb_chapter_inside_before');?>
-			<h1 class="chapter-title"><?php echo $title;?></h1>
+            <?php if ($bg_id) {
+                echo '<div class="ccb-chapter-image" style="background-image: url('.$bg[0].');"><h1 class="chapter-title">'.$title.'</h1></div>';
+            } else {
+                echo '<h1 class="chapter-title">'.$title.'</h1>';
+            }?>
 			<?php do_action('ccb_chapter_inside_after');?>
 		</section>
 		<?php do_action('ccb_chapter_outside_after');?>

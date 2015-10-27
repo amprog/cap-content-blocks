@@ -11,4 +11,24 @@
             border-top: 2px solid $light-gray;
         }
     }
+    &.ccb-chapter-has-image {
+        &:before {
+            display: none;
+        }
+        .ccb-chapter-image {
+            h1 {
+                @include display(flex);
+                @include justify-content(center);
+                @include align-items(center);
+                height: 60vh;
+                background-color: rgba(0,0,0,0.5);
+                color: #fff;
+                padding: 1rem;
+            }
+            @include media($columns-threshold){
+                background-attachment: fixed;
+            }
+            background-size: 100% auto;
+        }
+    }
 }
