@@ -26,6 +26,9 @@ function ccb_chapter_shortcode_register() {
                 echo '<h1 class="chapter-title">'.$title.'</h1>';
             }?>
 			<?php do_action('ccb_chapter_inside_after');?>
+            <?php if (is_admin()) {
+                echo '<style>.ccb-chapter-has-image .chapter-title{height: 400px!important;}</style>';
+            }?>
 		</section>
 		<?php do_action('ccb_chapter_outside_after');?>
 
